@@ -18,11 +18,13 @@ function cifrar (){
 }
 
 function decifrar (){
+    document.getElementById("container-muñeco").style.display = "none";
+    document.getElementById("container-salida").style.display = "inline";
     if(validar()){
         output = document.getElementById("texto-entrada").value;
+        output = output.replaceAll('ai', 'a');
         output = output.replaceAll('enter','e');
         output = output.replaceAll('imes', 'i');
-        output = output.replaceAll('ai', 'a');
         output = output.replaceAll('ober', 'o');
         output = output.replaceAll('ufat', 'u');
         document.getElementById("texto-salida").value = output;
