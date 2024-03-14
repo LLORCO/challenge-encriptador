@@ -1,9 +1,9 @@
 let output;
 
 function cifrar (){
-    document.getElementById("container-muñeco").style.display = "none";
-    document.getElementById("container-salida").style.display = "inline";
     if(validar()){
+        document.getElementById("container-muñeco").style.display = "none";
+        document.getElementById("container-salida").style.display = "inline";
         output = document.getElementById("texto-entrada").value;
         output = output.replaceAll('e','enter');
         output = output.replaceAll('i', 'imes');
@@ -18,9 +18,9 @@ function cifrar (){
 }
 
 function decifrar (){
-    document.getElementById("container-muñeco").style.display = "none";
-    document.getElementById("container-salida").style.display = "inline";
     if(validar()){
+        document.getElementById("container-muñeco").style.display = "none";
+        document.getElementById("container-salida").style.display = "inline";
         output = document.getElementById("texto-entrada").value;
         output = output.replaceAll('ai', 'a');
         output = output.replaceAll('enter','e');
@@ -36,7 +36,7 @@ function decifrar (){
 
 function validar (){
     for (let letra of document.getElementById("texto-entrada").value){
-        if (!"abcdefghijklmnñopqrstuvwxyz 0123456789".includes(letra)){
+        if (!"abcdefghijklmnñopqrstuvwxyz ".includes(letra)){
             return false;
         }
     }
